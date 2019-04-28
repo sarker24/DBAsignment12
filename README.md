@@ -10,7 +10,6 @@
 7.	 For verify run localhost:7474
 
 
-![Exercise 1](https://user-images.githubusercontent.com/31739314/56870707-9ba95700-6a13-11e9-9a0b-2cf23bf2a9cc.png)
+![Exercise 1](https://user-images.githubusercontent.com/31739314/56870759-a0bad600-6a14-11e9-9506-9e3608abaefd.png)
 
-
-![Exercise 2](https://user-images.githubusercontent.com/31739314/56870709-9fd57480-6a13-11e9-9032-9c9aa9f7b4cc.png)
+![Exercise 2](https://user-images.githubusercontent.com/31739314/56870760-a1ec0300-6a14-11e9-8992-1cf99927ba57.png)
