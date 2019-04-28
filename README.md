@@ -1,4 +1,6 @@
 # DBAsignment12
+
+## run neo4j server on windows:
 1.	For running neo4j I have download zip file from the link https://neo4j.com/download-center/#releases
 2.	Unzip the zip file 
 3.	Go to the cmd prompt with administrator access  and go to the bin folder
@@ -24,10 +26,6 @@ MERGE (t:Tweet
         content: row["Tweet content"]
     }
 );
-
-
-
-
 
 EX 2:
 Use the mentions list of each tweet to create a new set of nodes:
