@@ -10,40 +10,7 @@
 7.	 For verify run localhost:7474
 
 
-EX 1:
-LOAD CSV WITH HEADERS FROM "https://github.com/sarker24/DBAsignment12/blob/master/some2016UKgeotweets.csv" AS row
-WITH row
-WHERE NOT row.Latitude IS NULL AND NOT row.Longitude IS NULL
-MERGE (t:Tweet
-    {
-        username:row["User Name"],
-        nickname: row.Nickname,
-        place: row["Place (as appears on Bio)"],
-        latitude: toFloat(row.Latitude),
-        longitude: toFloat(row.Longitude),
-        mentions: [
-            m in filter(m in split(row["Tweet content"]," ") 
-            where m starts with "@" and size(m) > 1) | right(m,size(m)-1)
-        ],
-        content: row["Tweet content"]
-    }
-);
-
-EX 2:
-Use the mentions list of each tweet to create a new set of nodes:
-MATCH(t:Tweet) 
-WITH t
-FOREACH (
-    m in t.mentions | 
-    MERGE (tu:Tweeters { username:t.username} )
-    CREATE (tu)-[:MENTIONS]->(t)
-);
-
-Create a relation "Tweeted" between Tweeters and Tweet.
-MATCH(t:Tweet) 
-WITH t
-MERGE (tu:Tweeters { username:t.username} )
-CREATE (tu)-[:TWEETED]->(t);
+![Exercise 1](https://user-images.githubusercontent.com/31739314/56870707-9ba95700-6a13-11e9-9a0b-2cf23bf2a9cc.png)
 
 
-
+![Exercise 2](https://user-images.githubusercontent.com/31739314/56870709-9fd57480-6a13-11e9-9032-9c9aa9f7b4cc.png)
