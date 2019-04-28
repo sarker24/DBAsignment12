@@ -8,6 +8,8 @@
 5.	Run ne04j.bat file using install-service command
 6.	Use command net start neo4j for starting neo4j database
 7.	 For verify run localhost:7474
+
+
 EX 1:
 LOAD CSV WITH HEADERS FROM "https://github.com/sarker24/DBAsignment12/blob/master/some2016UKgeotweets.csv" AS row
 WITH row
